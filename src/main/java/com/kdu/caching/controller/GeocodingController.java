@@ -23,7 +23,7 @@ class GeocodingController {
     }
 
     // To get latitude and longitude from Address
-    @GetMapping("geocoding")
+    @GetMapping("geo")
     public ResponseEntity<Map<String, Double>> forwardGeocoding(@RequestParam String address) {
         return ResponseEntity.ok(geocodingService.getCoordinates(address));
     }
